@@ -3894,8 +3894,7 @@ textarea {
   width: 100%;
   display: inline-block;
   color: #fff;
-  background-color: #505252;
-}
+  background-color: #513c30!important;}
 .footer .cont {
   max-width: 1440px;
   margin: auto;
@@ -3976,7 +3975,7 @@ textarea {
 }
 .footer .copyright-footer {
   height: 70px;
-  background-color: #fff;
+  background-color: #f7f4ed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4023,7 +4022,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #fff;
+  background-color: #f7f4ed;
   opacity: 0.5;
 }
 .footer .copyright-footer .black {
