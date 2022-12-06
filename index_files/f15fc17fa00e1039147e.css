@@ -19920,7 +19920,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 }
 .nav li a:hover {
   text-decoration: underline;
-  color: rgb(215 209 131) !important;
+  color: #231f20 !important;
 }
 .modal h2 {
   font-size: 2em;
