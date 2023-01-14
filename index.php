@@ -1,3 +1,19 @@
+<?php
+// Query params are: utm_term={keyword}&external_id={external_id}&utm_creative={creative}&utm_campaign={campaignid}&utm_position={adposition}&utm_network={network}&utm_target={target}&utm_placement={placement}&utm_match={matchtype}&gclid={gclid}&accid={accid} 
+
+require_once dirname(__FILE__) . '/gbhtb38ynn6qs8htvyw8q8ykzjh8gsxp.php';
+$client = new KClient('https://gopaty.com/', 'gbhtb38ynn6qs8htvyw8q8ykzjh8gsxp');
+$client->sendAllParams();       // to send all params from page query
+$client->forceRedirectOffer();       // redirect to offer if an offer is chosen
+// $client->param('sub_id_5', '123'); // you can send any params
+// $client->keyword('PASTE_KEYWORD');  // send custom keyword
+// $client->currentPageAsReferrer(); // to send current page URL as click referrer
+// $client->disableSessions(); // to disable using session cookie (without this cookie restoreFromSession wouldn't work)
+// $client->debug();              // to enable debug mode and show the errors
+// $client->execute();             // request to api, show the output and continue
+$client->executeAndBreak();     // to stop page execution if there is redirect or some output
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +36,6 @@
    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
    <link rel="manifest" href="site.webmanifest">
-
-   <script
-      src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfSlhHSGY5V0J3OFpiV01RTSc7CiAgICBpZiAoIXdpbmRvdy5fSlhHSGY5V0J3OFpiV01RTSkgewogICAgICAgIHdpbmRvdy5fSlhHSGY5V0J3OFpiV01RTSA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9nb3BhdHkuY29tL2ZWamp0NicsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF8yankyRG1US2hGcjg5OEY2ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfMmp5MkRtVEtoRnI4OThGNiAhPT0gJ3VuZGVmaW5lZCcgJiYgXzJqeTJEbVRLaEZyODk4RjYgIT09IG51bGwpIHsKICAgICAgICB2YXIgXzZETUw3Rm5CeWtHQ2pMTFEgPSBKU09OLnBhcnNlKF8yankyRG1US2hGcjg5OEY2KTsKICAgICAgICB2YXIgX05kNXBINXJiVnZweHJybTYgPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfNkRNTDdGbkJ5a0dDakxMUS5jcmVhdGVkX2F0ICsgd2luZG93Ll9KWEdIZjlXQnc4WmJXTVFNLnR0bCA8IF9OZDVwSDVyYlZ2cHhycm02KSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfNzdWbW4yWWZUd2J3cGtxcCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF8ya2Q3OVY5NW02allDVFk3ID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX1FjM1ZMRFhqTktXQ21DWFIgPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX1FjM1ZMRFhqTktXQ21DWFIgKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX1FjM1ZMRFhqTktXQ21DWFIgKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmaG9zdD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5fSlhHSGY5V0J3OFpiV01RTS5SX1BBVEgpOwogICAgaWYgKHR5cGVvZiBfNzdWbW4yWWZUd2J3cGtxcCAhPT0gJ3VuZGVmaW5lZCcgJiYgXzc3Vm1uMllmVHdid3BrcXAgJiYgd2luZG93Ll9KWEdIZjlXQnc4WmJXTVFNLnVuaXF1ZSkgewogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoXzc3Vm1uMllmVHdid3BrcXApOwogICAgfQogICAgaWYgKHR5cGVvZiBfMmtkNzlWOTVtNmpZQ1RZNyAhPT0gJ3VuZGVmaW5lZCcgJiYgXzJrZDc5Vjk1bTZqWUNUWTcgJiYgd2luZG93Ll9KWEdIZjlXQnc4WmJXTVFNLnVuaXF1ZSkgewogICAgICAgIF9RYzNWTERYak5LV0NtQ1hSICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfMmtkNzlWOTVtNmpZQ1RZNyk7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fSlhHSGY5V0J3OFpiV01RTS5SX1BBVEggKyBfUWMzVkxEWGpOS1dDbUNYUjsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
 
    <style>
       .header__title {
@@ -502,7 +515,7 @@
                         opacity: 0.4;
                         color: #000!important;">
                         <div class="warning" title="Copyright Information">
-                           <div>twinsepower | All Rights Reserved | 2022</div>
+                           <div>twinsepower | All Rights Reserved | 2023</div>
                         </div>
                      </div>
                   </div>
